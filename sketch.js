@@ -57,6 +57,21 @@ function setup() {
   Vaccination.position(290,15);
   Vaccination.mousePressed(vaccination);
 
+  
+  Play=createButton("Play with Drago");
+  Play.position(100,40);
+  Play.mousePressed(play);
+
+  FoodStock=createButton("check foodStock");
+  FoodStock.position(230,40);
+  FoodStock.mousePressed(foodstock);
+
+  W=createButton("Washroom");
+  W.position(370,40);
+  W.mousePressed(wash);
+
+
+
 }
 
 function draw() {
@@ -134,6 +149,39 @@ function vaccination(){
   v.scale=0.8
  
 }
+
+function play(){
+  l=createSprite(400,350,1000,1000)
+  l.shapeColor="green"
+  p=createSprite(400,400,1000,1000)
+ pac=loadAnimation("images/happydog.png","images/runningLeft.png");
+  p.addAnimation("running", pac)
+  p.scale=0.5
+ 
+}
+
+function foodstock(){
+  
+  r=createSprite(400,350,1000,1000)
+  
+    w=createSprite(400,350,1000,1000)
+ was=loadImage("images/Food Stock.png");
+  w.addImage(was)
+  w.scale=0.5
+ 
+}
+
+
+function wash(){
+  quas=createSprite(400,350,1000,1000)
+  q=createSprite(400,350,1000,1000)
+  
+    
+  q.addImage(washroom)
+  
+ 
+}
+
 
 //update gameState
 function update(state){
